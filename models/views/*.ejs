@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Blog Website</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <h1>All Blogs</h1>
+  <a href="/blogs/new">Create New Blog</a>
+  <% blogs.forEach(blog => { %>
+    <div>
+      <h2><a href="/blogs/<%= blog._id %>"><%= blog.title %></a></h2>
+      <img src="<%= blog.image %>" width="300" />
+    </div>
+  <% }) %>
+</body>
+</html>
